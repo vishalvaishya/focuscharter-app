@@ -3,18 +3,22 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="kendo/styles/kendo.mobile.nova.min.css" />
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
     <link href="styles/main.css" rel="stylesheet" />
-
+    <link rel="stylesheet" type="text/css" href="styles/font-awesome/css/font-awesome.min.css"))" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>    
 
-    <script src="scripts/app.js"></script>
-
+    <script src="scripts/app.js"></script> 
+    <script src="scripts/appData.js"></script> 
+    <!--<script src="scripts/sql-db-operations.js"></script> -->
+    <script type="text/javascript" charset="utf-8" src="scripts/telephonenumber.js"></script>   
+  
 </head>
 <body>
- 
   <div data-role="layout" data-id="main">
     <div data-role="header">
       <div data-role="navbar">
@@ -24,25 +28,38 @@
     </div>
 
     <!-- application views will be rendered here -->
-    
+   
   </div>
 
   <!-- application drawer and contents -->
-  <div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Navigation">
+  <div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Focus Charter">
     <div data-role="header">
       <div data-role="navbar">
-        <span data-role="view-title"></span>
+        <h1 data-role="view-title" style="color:white;"><i class="k-icon k-i-calendar"></i>Focus Charter</h1>
       </div>
     </div>
+
     <ul data-role="listview">
       <li>
-        <a href="views/home.html">Home</a>
+        <a href="views/children-list.html"><i class="fa fa-users"></i>&nbsp;My Childrens</a>
       </li>
       <li>
-        <a href="views/settings.html">Settings</a>
+        <a href="views/bus-status.html"><i class="fa fa-bus"></i>&nbsp;Spot the Bus</a>
       </li>
       <li>
-        <a href="views/buses.html">Search Buses</a>
+        <a href="views/bus-location-map.html"><i class="fa fa-map-marker"></i>&nbsp;Find on Map</a>
+      </li>     
+      <li>
+        <a href="views/settings.html"><i class="fa fa-bell"></i>&nbsp;Notifications</a>
+      </li>
+      <li>
+        <a href="views/settings.html"><i class="fa fa-cog"></i>&nbsp;Settings</a>
+      </li>
+        <li>
+        <a href="views/settings.html"><i class="fa fa-cog"></i>&nbsp;Rate us</a>
+      </li>
+      <li>
+        <a href="views/contacts.html"><i class="fa fa-question-circle"></i>&nbsp;Help</a>
       </li>
     </ul>
   </div>       

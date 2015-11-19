@@ -1,0 +1,38 @@
+[
+    {
+	    "childid" : 1,
+        "name": "Vishal Vaishya",
+		"schoolid" : "SC0104",
+        "schoolname": "Adarsh English School",
+        "routeno": "107",
+        "pickuplocation": "Rungtha High School Road, Nashik",
+		"pickuploclat": 43.475408,
+		"pickuploclng": -80.533733,
+		"pickuptime" : "9:00 AM",
+		"pickupdays" : "Mon,Tue,Wed,Thu,Fri"        
+    },
+    {
+        "childid" : 2,
+        "name": "Swapnil Nirhali",
+		"schoolid" : "SC0234",
+        "schoolname": "Nirmala Convent School",
+        "routeno": "127",
+        "pickuplocation": "Rungtha High School Road, Nashik",
+		"pickuploclat": 43.475408,
+		"pickuploclng": -80.533733,
+		"pickuptime" : "9:00 AM",
+		"pickupdays" : "Mon,Tue,Wed,Thu,Fri" 
+    },
+     {
+        "childid" : 3,
+        "name": "Bhushan Pawar",
+		"schoolid" : "SC3234",
+        "schoolname": "Nirmal Convent School, Niphad",
+        "routeno": "197",
+        "pickuplocation": "Rungtha High School Road, Nashik",
+		"pickuploclat": 43.475408,
+		"pickuploclng": -80.533733,
+		"pickuptime" : "9:30 AM",
+		"pickupdays" : "Mon,Tue,Wed,Thu,Fri" 
+    }
+]

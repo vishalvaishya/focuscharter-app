@@ -1,0 +1,50 @@
+<div data-role="view" id="map" data-title="Live Bus Status"
+    data-init="initMap" data-stretch="true"
+    data-layout="main" data-model="APP.models.home"
+    data-show="showMap">      
+</div>
+<script>
+    var map;
+    function initMap() {
+        // Set up the map.
+        var svPos = { lat: 37.869085, lng: -122.254775 };
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: svPos,
+            zoom: 16,
+            streetViewControl: false
+        });
+        createChildListControl();
+    }
+
+    function showMap() {
+        var location = new google.maps.LatLng(37.869085, -122.254775);
+        map.panTo(location);
+    }
+
+    function createChildListControl() {
+        var controlDiv = document.createElement("div");
+        var controlChildList = document.createElement('select');
+        controlChildList.id = "childList";
+        controlChildList.className = "floating-panel-map";
+        var array = ["Vishal","Swapnil","Bhushan"];        
+        controlDiv.appendChild(controlChildList);
+               
+        $.ajax({
+            type: "GET",
+            url: "data/bus-live-status.json",
+            dataType: "json"
+        }).success(function (data, code, xhr) {
+            //Create and append the options
+            var childListData = data;
+            for (var i = 0; i < childListData.length; i++) {
+                var option = document.createElement("option");
+                option.value = childListData[i].childid;
+                option.text = childListData[i].name + " [Route: " + childListData[i].routeno + "]";
+                controlChildList.appendChild(option);
+            }
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(controlDiv);            
+        }).error(function (e, r, m) {
+            
+        });
+    }
+</script>

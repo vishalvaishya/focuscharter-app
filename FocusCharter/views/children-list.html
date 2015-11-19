@@ -1,0 +1,115 @@
+<div data-role="view"  data-style="inset" 
+    data-title="Childrens" data-layout="main" 
+    data-init="storesInit" data-show="onStoresShow"
+    data-model="APP.models.childrens">
+    <header data-role="header">
+        <div data-role="navbar">
+          <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+          <span data-role="view-title"></span>
+          <a class="nav-button" data-align="right" data-role="button" style="padding:0 8px;"><i class="fa fa-plus"></i></a>            
+        </div>
+    </header>  
+    <div id="childrensContent">        
+        <ul id="childrenList" data-role="listview" data-style="inset" class="customlist"
+            data-template="tmplChildreListItem" data-bind="source: ds" data-click="childItemClick" data-selectable="true">
+        </ul>
+    </div>
+    <div data-role="footer">           
+    </div>
+    <script id="tmplChildreListItem" type="text/x-kendo-template">
+        <div class="j-listview-item">
+            <div class="j-listview-item-content">
+                <div style="float:right;display:none;">                        
+                    <a data-align="right" data-role="button" style="padding:0 8px;border:none;"><i class="fa fa-pencil"></i></a>
+                    <a data-align="right" data-role="button" style="padding:0 8px;border:none;"><i class="fa fa-trash"></i></a>
+                </div> 
+                <div style="float:left;">                        
+                    <i class="fa fa-user" data-align="left" style="font-size:48px; width:54px;"></i>
+                </div>   
+                <h2 style='margin:0px;'>#: name #               
+                </h2>                            
+                <h4>#: schoolname #</h4>
+            </div>
+        </div>
+    </script>
+    <script>
+        var dataSource = new kendo.data.DataSource({
+            serverPaging: true,
+            pageSize: 10,
+            transport: {
+                read: {
+                    url: "data/bus-live-status.json"
+                },
+                dataType: "json"
+            },
+            //transport: {
+            //    read: {
+            //        url: "http://search.twitter.com/search.json", // the remove service url
+            //        dataType: "jsonp" // JSONP (JSON with padding) is required for cross-domain AJAX
+            //    },
+            //    parameterMap: function(options) {
+            //        return {
+            //            q: "javascript",
+            //            page: options.page,
+            //            rpp: options.pageSize
+            //        };
+            //    }
+            //},
+            schema: {
+                model: {
+                    id: "id",
+                    fields: {
+                        id: { type: "number" },
+                        name: { type: "string" },
+                        schoolid: { type: "string" },
+                        schoolname: { type: "string" },
+                        routeno: { type: "string" },
+                        pickuplocation: { type: "string" },
+                        pickuploclat: { type: "float" },
+                        pickuploclng: { type: "float" },
+                        pickuptime: { type: "string" },
+                        pickupdays: { type: "string" }
+                    }
+                }
+            }
+        });
+
+        $("#childrenList").kendoMobileListView({
+            dataSource: dataSource,                     
+            template: $("#tmplChildreListItem").text(),
+        });
+
+        function childItemClick(e) {
+            app.navigate('views/bus-location-map.html', "fade");
+        }
+    </script>
+</div>
+
+<!--<div id="stores" 
+     data-role="view" data-title="Stores" data-style="inset"
+     data-init="storesInit" data-show="onStoresShow"
+     data-model="storesListViewModel">
+    <header data-role="header">
+        <div data-role="navbar">
+            <ul id="btnStoreViewToggle" data-role="buttongroup" data-index="0" data-align="center">
+                <li>Map</li>
+                <li>List</li>
+            </ul>
+        </div>
+    </header>
+    <div id="storesContent">
+        <div id="map"></div>
+        <ul id="storeList" data-role="listview" data-style="inset" style="display:none"
+            data-template="tmplChildreListItem" data-bind="source: stores">
+        </ul>
+    </div>
+    <span id="offline">Please reconnect to Internet.</span>
+</div>
+<script id="tmplChildreListItem" type="text/x-kendo-template">
+    <div class="j-listview-item stores">
+        <div class="j-listview-item-content">
+            <span>#: Name #</span>
+            <span>#: Address #</span>
+        </div>
+    </div>
+</script>-->

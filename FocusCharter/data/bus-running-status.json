@@ -1,0 +1,42 @@
+[
+	{
+		"routeno": 107,
+		"busid" : "BUS002",
+		"delayrun" : "on time",
+		"date" : "22-Sep-14",
+		"from" : "MUMNAKA",
+		"fromname" : "MUMBAI NAKA",
+		"scharr" : "11-Nov-15 04:50",
+		"schdep" : "11-Nov-15 05:15",
+		"actarr" : "11-Nov-15 04:50",
+		"actdep" : "11-Nov-15 05:20",
+		"delaydep" : 0,
+		"delayarr" : 0,
+		"src" : "NSKRD",
+		"srcname" : "NASHIK ROAD",
+		"dest" : "BMC",
+		"destname" : "BHONSALA COLLEGE",
+		"statusat" : "11-Nov-15 08:29",
+		"disttogo" : "1 kms"
+	},
+	{
+		"routeno": 127,
+		"busid" : "BUS008",
+		"delayrun" : "delayed by 3 min",
+		"date" : "11-Nov-15",
+		"from" : "MUMNAKA",
+		"fromname" : "MUMBAI NAKA",
+		"scharr" : "11-Nov-15 04:50",
+		"schdep" : "11-Nov-15 05:15",
+		"actarr" : "11-Nov-15 04:50",
+		"actdep" : "11-Nov-15 05:20",
+		"delaydep" : 5,
+		"delayarr" : 5,
+		"src" : "NSKRD",
+		"srcname" : "NASHIK ROAD",
+		"dest" : "BYKCOL",
+		"destname" : "BYK COLLEGE",
+		"statusat" : "11-Nov-15 08:29",
+		"disttogo" : "3 kms"		
+	}
+]
