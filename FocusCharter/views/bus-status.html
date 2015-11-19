@@ -1,0 +1,47 @@
+<div data-role="view"  data-style="inset" 
+    data-title="Bus Status" data-layout="main">
+    <header data-role="header">
+        <div data-role="navbar">
+          <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+          <span data-role="view-title"></span>
+          <a class="nav-button" data-align="right" data-role="button" style="padding:0 8px;"><i class="fa fa-plus"></i></a>            
+        </div>
+    </header>  
+    <div id="busStatusContent">        
+        <ul id="busStatusList" data-role="listview" data-style="inset" class="customlist"
+            data-template="tmplChildreListItem" data-bind="source: ds" data-selectable="true">
+        </ul>
+    </div>
+    <div data-role="footer">           
+    </div>
+    <script id="tmplBusStatusListItem" type="text/x-kendo-template">
+        <div class="j-listview-item">
+            <div class="j-listview-item-content">               
+                <h2 style='margin:0px;'>Route No #: routeno #               
+                </h2>                            
+                <h4>#: delayrun #</h4>
+            </div>
+        </div>
+    </script>
+    <script>
+        var dataSource = new kendo.data.DataSource({
+            serverPaging: true,
+            pageSize: 10,
+            transport: {
+                read: {
+                    url: "data/bus-running-status.json"
+                },
+                dataType: "json"
+            }
+        });
+
+        $("#busStatusList").kendoMobileListView({
+            dataSource: dataSource,
+            template: $("#tmplBusStatusListItem").text(),
+        });
+
+        function childItemClick(e) {
+            app.navigate('views/bus-location-map.html', "fade");
+        }
+    </script>
+</div>
