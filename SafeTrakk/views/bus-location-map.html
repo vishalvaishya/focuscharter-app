@@ -23,15 +23,10 @@
 
     function createChildListControl() {
         var controlDiv = document.createElement("div");
-        
         var controlChildList = document.createElement('select');
-        
         controlChildList.id = "childList";
-        
         controlChildList.className = "floating-panel-map";
-        
-        var array = ["Vishal","Swapnil","Bhushan"];    
-        
+        var array = ["Vishal","Swapnil","Bhushan"];        
         controlDiv.appendChild(controlChildList);
                
         $.ajax({

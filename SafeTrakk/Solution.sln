@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}") = "FocusCharter", "FocusCharter.iceproj", "{14462FEC-131E-4ACF-9CCE-564A7944CF60}"
+Project("{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}") = "SafeTrakk", "SafeTrakk.iceproj", "{14462FEC-131E-4ACF-9CCE-564A7944CF60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
