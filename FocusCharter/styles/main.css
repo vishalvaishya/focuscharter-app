@@ -45,13 +45,15 @@
 
 }
 
-    .customlist li:hover
-    {
+.customlist li:hover
+ {
         /*background-color:#2a2d40;*/
         background-color:#efefef;        
-    }
+  }
+
 
 .listview-selected
 {
     background-color:#efefef;
 }
+

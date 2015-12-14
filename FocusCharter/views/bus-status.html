@@ -23,7 +23,9 @@
             </div>
         </div>
     </script>
+    
     <script>
+        
         var dataSource = new kendo.data.DataSource({
             serverPaging: true,
             pageSize: 10,
@@ -34,14 +36,17 @@
                 dataType: "json"
             }
         });
+        
 
         $("#busStatusList").kendoMobileListView({
             dataSource: dataSource,
             template: $("#tmplBusStatusListItem").text(),
         });
+        
 
         function childItemClick(e) {
             app.navigate('views/bus-location-map.html', "fade");
-        }
+            }
+        
     </script>
 </div>
