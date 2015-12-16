@@ -1,38 +1,41 @@
 [
     {
 	    "childid" : 1,
-        "name": "Vishal Vaishya",
+        "name": "DELANIE ABARCA",
 		"schoolid" : "SC0104",
-        "schoolname": "Adarsh English School",
+        "schoolname": "Beebe Elementary School",
         "routeno": "107",
-        "pickuplocation": "Rungtha High School Road, Nashik",
+        "pickuplocation": "1852 Endicot circle, Carpentersville, IL",
 		"pickuploclat": 43.475408,
 		"pickuploclng": -80.533733,
 		"pickuptime" : "9:00 AM",
+        "pickupeta" : "9:00 AM",
 		"pickupdays" : "Mon,Tue,Wed,Thu,Fri"        
     },
     {
         "childid" : 2,
-        "name": "Swapnil Nirhali",
+        "name": "JESSICA SMITH",
 		"schoolid" : "SC0234",
-        "schoolname": "Nirmala Convent School",
+        "schoolname": "Highlands Elementary School",
         "routeno": "127",
-        "pickuplocation": "Rungtha High School Road, Nashik",
+        "pickuplocation": "11851 Cape Cod Ln, Huntley, IL",
 		"pickuploclat": 43.475408,
 		"pickuploclng": -80.533733,
-		"pickuptime" : "9:00 AM",
+        "pickuptime" : "9:15 AM",
+		"pickupeta" : "9:20 AM",
 		"pickupdays" : "Mon,Tue,Wed,Thu,Fri" 
     },
      {
         "childid" : 3,
-        "name": "Bhushan Pawar",
+        "name": "SARAH SMITH",
 		"schoolid" : "SC3234",
-        "schoolname": "Nirmal Convent School, Niphad",
+        "schoolname": "Highlands Elementary School",
         "routeno": "197",
-        "pickuplocation": "Rungtha High School Road, Nashik",
+        "pickuplocation": "11851 Cape Cod Ln, Huntley, IL",
 		"pickuploclat": 43.475408,
 		"pickuploclng": -80.533733,
 		"pickuptime" : "9:30 AM",
+        "pickupeta" : "9:40 AM",
 		"pickupdays" : "Mon,Tue,Wed,Thu,Fri" 
     }
 ]

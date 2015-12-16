@@ -6,7 +6,7 @@
         <div data-role="navbar">
           <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
           <span data-role="view-title"></span>
-          <a class="nav-button" data-align="right" data-role="button" style="padding:0 8px;"><i class="fa fa-plus"></i></a>            
+          <!-- <a class="nav-button" data-align="right" data-role="button" style="padding:0 8px;"><i class="fa fa-plus"></i></a>             -->
         </div>
     </header>  
     <div id="childrensContent">        
@@ -18,17 +18,15 @@
     </div>
     <script id="tmplChildreListItem" type="text/x-kendo-template">
         <div class="j-listview-item">
-            <div class="j-listview-item-content">
-                <div style="float:right;display:none;">                        
-                    <a data-align="right" data-role="button" style="padding:0 8px;border:none;"><i class="fa fa-pencil"></i></a>
-                    <a data-align="right" data-role="button" style="padding:0 8px;border:none;"><i class="fa fa-trash"></i></a>
-                </div> 
-                <div style="float:left;">                        
-                    <i class="fa fa-user" data-align="left" style="font-size:48px; width:54px;"></i>
+            <div class="j-listview-item-content">               
+                <div style="margin-top: 20px; margin-left: 50%; left: 10px; position: absolute;opacity:0.03">                        
+                    <i class="fa fa-user" data-align="left" style="font-size:180px; width:60px;"></i>
                 </div>   
                 <h2 style='margin:0px;'>#: name #               
                 </h2>                            
-                <h4>#: schoolname #</h4>
+                <h4><i class="fa fa-map-marker"></i>&nbsp;#: pickuplocation #</h4>
+                <h4><i class="fa fa-calendar"></i>&nbsp;Scheduled Time #: pickuptime #</h4>
+                <h4><i class="fa fa-clock-o"></i>&nbsp;ETA #: pickupeta #</h4>
             </div>
         </div>
     </script>
@@ -41,20 +39,7 @@
                     url: "data/bus-live-status.json"
                 },
                 dataType: "json"
-            },
-            //transport: {
-            //    read: {
-            //        url: "http://search.twitter.com/search.json", // the remove service url
-            //        dataType: "jsonp" // JSONP (JSON with padding) is required for cross-domain AJAX
-            //    },
-            //    parameterMap: function(options) {
-            //        return {
-            //            q: "javascript",
-            //            page: options.page,
-            //            rpp: options.pageSize
-            //        };
-            //    }
-            //},
+            },         
             schema: {
                 model: {
                     id: "id",
@@ -68,6 +53,7 @@
                         pickuploclat: { type: "float" },
                         pickuploclng: { type: "float" },
                         pickuptime: { type: "string" },
+                        pickupeta: { type: "string" },
                         pickupdays: { type: "string" }
                     }
                 }
@@ -75,7 +61,7 @@
         });
 
         $("#childrenList").kendoMobileListView({
-            dataSource: dataSource,                     
+            dataSource: dataSource,
             template: $("#tmplChildreListItem").text(),
         });
 

@@ -3,7 +3,7 @@
 <head>
     <title></title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="kendo/styles/kendo.mobile.nova.min.css" />
+    <!--<link rel="stylesheet" href="kendo/styles/kendo.mobile.nova.min.css" />-->
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
     <link href="styles/main.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles/font-awesome/css/font-awesome.min.css"))" />
@@ -32,31 +32,29 @@
   </div>
 
   <!-- application drawer and contents -->
-  <div data-role="drawer" id="appDrawer" style="width: 270px" data-title="Focus Charter">
+  <div data-role="drawer" id="appDrawer" style="width: 270px">
     <div data-role="header">
       <div data-role="navbar">
-        <h1 data-role="view-title" style="color:white;"><i class="k-icon k-i-calendar"></i>Focus Charter</h1>
+        <h1 data-role="view-title" class="logo-f" style="color:white;">SafeTrakk</h1>          
       </div>
+      <h4 style="margin-left:5px;"> <small style="color:#dfdfdf;font-size:18px;">&nbsp;Patrick Smith: 860-997-2144</small></h4>
     </div>
-
+    
     <ul data-role="listview">
       <li>
         <a href="views/children-list.html"><i class="fa fa-users"></i>&nbsp;My Childrens</a>
       </li>
       <li>
-        <a href="views/bus-status.html"><i class="fa fa-bus"></i>&nbsp;Spot the Bus</a>
-      </li>
-      <li>
-        <a href="views/bus-location-map.html"><i class="fa fa-map-marker"></i>&nbsp;Find on Map</a>
-      </li>     
-      <li>
+        <a href="views/bus-location-map.html"><i class="fa fa-bus"></i>&nbsp;Spot the Bus</a>
+      </li>        
+      <!--<li>
         <a href="views/settings.html"><i class="fa fa-bell"></i>&nbsp;Notifications</a>
-      </li>
+      </li>-->
       <li>
-        <a href="views/settings.html"><i class="fa fa-cog"></i>&nbsp;Settings</a>
+        <a href="views/settings.html"><i class="fa fa-cog"></i>&nbsp;Preferences</a>
       </li>
         <li>
-        <a href="views/settings.html"><i class="fa fa-cog"></i>&nbsp;Rate us</a>
+        <a href="views/settings.html"><i class="fa fa-star"></i>&nbsp;Rate us</a>
       </li>
       <li>
         <a href="views/contacts.html"><i class="fa fa-question-circle"></i>&nbsp;Help</a>

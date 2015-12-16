@@ -55,3 +55,23 @@
 {
     background-color:#efefef;
 }
+
+.km-header
+{
+    background:#d5045f;       
+}
+
+.logo-f
+{
+    /*min-height:72px;*/
+    background: url("patterns/f.png") no-repeat;
+    background-size: 51px 42px;  
+    padding:4px;
+      background-position-x: 10px;
+  background-position-y: 10px;  
+}
+
+.km-nova .km-drawer > .km-scroll-wrapper
+{
+    height:auto;
+}
