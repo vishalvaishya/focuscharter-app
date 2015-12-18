@@ -6,7 +6,7 @@
     <!--<link rel="stylesheet" href="kendo/styles/kendo.mobile.nova.min.css" />-->
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
     <link href="styles/main.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="styles/font-awesome/css/font-awesome.min.css"))" />
+    <link rel="stylesheet" type="text/css" href="styles/font-awesome/css/font-awesome.min.css" />
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
@@ -15,8 +15,7 @@
     <script src="scripts/app.js"></script> 
     <script src="scripts/appData.js"></script> 
     <!--<script src="scripts/sql-db-operations.js"></script> -->
-    <script type="text/javascript" charset="utf-8" src="scripts/telephonenumber.js"></script>   
-  
+    <script type="text/javascript" charset="utf-8" src="scripts/telephonenumber.js"></script>     
 </head>
 <body>
   <div data-role="layout" data-id="main">
@@ -36,10 +35,11 @@
     <div data-role="header">
       <div data-role="navbar">
         <h1 data-role="view-title" class="logo-f" style="color:white;">SafeTrakk</h1>          
-      </div>
-      <h4 style="margin-left:5px;"> <small style="color:#dfdfdf;font-size:18px;">&nbsp;Patrick Smith: 860-997-2144</small></h4>
+      </div>      
     </div>
-    
+    <div data-role="footer" style="background-color:#d5045f;padding:10px 0px;">
+        <h4 style="margin-left:5px;"> <small style="color:#fff;font-size:18px;">&nbsp;Patrick Smith: 860-997-2144</small></h4>
+      </div>
     <ul data-role="listview">
       <li>
         <a href="views/children-list.html"><i class="fa fa-users"></i>&nbsp;My Childrens</a>
@@ -52,12 +52,9 @@
       </li>-->
       <li>
         <a href="views/settings.html"><i class="fa fa-cog"></i>&nbsp;Preferences</a>
-      </li>
-        <li>
-        <a href="views/settings.html"><i class="fa fa-star"></i>&nbsp;Rate us</a>
-      </li>
+      </li>     
       <li>
-        <a href="views/contacts.html"><i class="fa fa-question-circle"></i>&nbsp;Help</a>
+        <a href="views/help.html"><i class="fa fa-question-circle"></i>&nbsp;Miscellaneous</a>
       </li>
     </ul>
   </div>       

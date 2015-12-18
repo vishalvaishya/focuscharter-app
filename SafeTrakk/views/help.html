@@ -1,0 +1,73 @@
+<div data-role="view" data-layout="main" data-model="APP.models.home" data-use-native-scrolling="true">
+    <header data-role="header">
+        <div data-role="navbar">
+          <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+          <span data-role="view-title">Miscellaneous</span>          
+        </div>
+    </header>  
+    <div id="helpcontent" style="padding:5px 10px;">        
+       <h1>
+           FAQ
+        </h1>
+        <hr />
+        <div>
+            <h2>
+                How to 
+            </h2>
+        </div>
+        <br />
+        <h1>
+           Careers            
+        </h1>
+        <hr />
+        <div>
+            <h2>
+                Like to work with us? 
+            </h2>
+            Yes. We are hiring. Open positions for Drivers for our buses, Computer Operator and Engineers. <br /><br />
+            <a data-role="button" class="km-justified btn-primary" data-rel="modalview" href="#modalview-job" id="modalview-open-button">Apply</a>
+        </div>
+        <br />
+        <h1>
+           Rate Us
+        </h1>
+        <hr />
+        <div>
+            <h2>
+                Would like to contribute. Rate us on Market.
+            </h2>            
+        </div>
+    </div>
+</div>
+
+<div data-role="modalview" id="modalview-job" style="width: 90%;">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Apply for Job</span>
+            <a data-click="closeModalViewJob" data-role="button" data-align="right">Cancel</a>
+        </div>
+    </div>
+	<div style="padding:10px;">
+          <ul data-role="buttongroup" data-select-on="up">
+            <li>Other</li>
+            <li>Bus Driver</li>
+            <li>Operator</li>
+              <li>Engineer</li>
+          </ul>       
+        <br/>
+        <textarea  id="job-description" style="height: 200px;width:100%;" placeholder="Description" style="font-size:20px;"></textarea>        
+    </div>
+  
+    <div data-role="footer">
+        <div data-role="navbar">
+            <a data-click="submit_job_application" id="modalview-submit-button" type="button" data-role="button" data-align="right">Submit</a>
+            <a data-click="closeModalViewJob" id="modalview-cancel-button" type="button" data-role="button" data-align="right">Cancel</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function closeModalViewJob() {
+        $("#modalview-job").kendoMobileModalView("close");
+    }
+</script>

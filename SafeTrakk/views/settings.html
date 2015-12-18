@@ -1,3 +1,66 @@
-<div data-role="view" data-title="Settings" data-layout="main" data-model="APP.models.settings">
-  <h1 data-bind="html: title"></h1>
+<div data-role="view" data-title="Settings" data-layout="main" data-model="APP.models.settings" data-init="initSettings">
+  <h1>
+      Notifications
+    </h1>
+    <hr style="margin:0px 10px;"/>
+    <div>
+        <ul id="notification-setting" role="listview">            
+        </ul>
+    </div>
+    <br />
+    <h1>
+      Refresh Settings
+    </h1>
+    <hr style="margin:0px 10px;"/>
+    <ul data-role="listview" >
+       <li>
+            Map Auto-Refresh<input id="subscription-switch" data-role="switch" checked /></li> 
+        <li data-role="button" data-rel="modalview" href="#modalview-refresh-intervals" data-align="left" style="text-align:left;">
+            Refresh Interval <br /> <small>Currently set to 5 secs</small>
+        </li>
+        </ul>   
+    </div>
 </div>
+
+<div data-role="modalview" id="modalview-refresh-intervals" style="width: 90%;height:80%;">   
+	<ul data-role="listview" data-click="closerefreshintervals">
+                <li><label>1 sec <input name="intervals" type="radio"></label></li>
+                <li><label>5 sec <input name="intervals" type="radio"></label></li>
+                <li><label>10 sec <input name="intervals" type="radio"></label></li>
+        		<li><label>20 sec <input name="intervals" type="radio"></label></li>
+                <li><label>30 sec <input name="intervals" type="radio"></label></li>
+                <li><label>1 min <input name="intervals" type="radio"></label></li>
+        		<li><label>2 min <input name="intervals" type="radio"></label></li>
+                <li><label>5 min <input name="intervals" type="radio"></label></li>
+                <li><label>10 min <input name="intervals" type="radio"></label></li>
+            </ul>
+</div>
+<script>
+    function closerefreshintervals() {
+        $("#modalview-refresh-intervals").kendoMobileModalView("close");
+    }
+    
+    var map;
+    function initSettings() {
+        $.ajax({
+            type: "GET",
+            url: "data/bus-live-status.json",
+            dataType: "json"
+        }).success(function (data, code, xhr) {
+            //Create and append the options
+            var childListData = data;
+            for (var i = 0; i < childListData.length; i++) {
+                var child = childListData[i];
+                var option = document.createElement("li");
+                option.style.display = "block";
+                $(option).css({ 'margin-bottom' : '20px'});
+                option.innerHTML = "<a><h1 style='margin-bottom:3px;'>" + child.name +  "</h1><h4><div>Pick Up: " + child.pickupnotification +" mins before ETA</div> <div>Drop Off : " + child.dropoffnotification + " mins before ETA</h4></div></a>";
+                console.log(option.innerHTML);
+                document.getElementById('notification-setting').appendChild(option);
+            }
+            //map.controls[google.maps.ControlPosition.TOP_CENTER].push(controlDiv);            
+        }).error(function (e, r, m) {
+            
+        });
+    }
+</script>

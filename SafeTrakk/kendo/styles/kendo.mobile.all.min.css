@@ -183,7 +183,7 @@
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
-    flex: 1;
+    flex: 1;.km-nova .km-accent.k-toolbar
     -moz-box-align: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -15969,7 +15969,7 @@ html .km-material .k-split-container.km-actionsheet > li, html .km-material .k-o
 
     .km-nova .km-accent.km-navbar, .km-nova .km-accent.k-toolbar, .km-nova .km-accent.km-tabstrip, .km-nova .km-vertical-tabstrip .km-button.km-state-active:before, .km-nova .km-drawer .km-listview li.km-state-active:before
     {
-        background: #ff4350;
+        background: #d5045f;
     }
 
     .km-nova .km-listview-link:after, .km-nova .km-listview-label:after
@@ -16203,7 +16203,7 @@ html .km-material .k-split-container.km-actionsheet > li, html .km-material .k-o
 
     .km-nova span.km-switch
     {
-        color: #ff4350;
+        color: #d5045f;
     }
 
     .km-nova span.km-switch-off
@@ -16243,7 +16243,7 @@ html .km-material .k-split-container.km-actionsheet > li, html .km-material .k-o
 
     .km-nova input[type=radio], .km-nova input[type=checkbox]
     {
-        color: #ff4350;
+        color: #d5045f;
         border-color: #dee7ec;
     }
 
@@ -16254,7 +16254,7 @@ html .km-material .k-split-container.km-actionsheet > li, html .km-material .k-o
 
         .km-nova input[type=radio]:checked:after
         {
-            background: #ff4350;
+            background: #d5045f;
         }
 
     .km-nova .km-checkbox:checked + .km-checkbox-label:after
@@ -17370,8 +17370,8 @@ html .km-material .k-split-container.km-actionsheet > li, html .km-material .k-o
 
 .km-nova .km-view-title
 {
-    font-size: 1.2em;
-    line-height: 2.78em;
+    font-size: 1.4em;
+    line-height: 2.78em;    
 }
 
 .km-nova .km-navbar .km-no-title > [data-role='view-title']
@@ -17381,12 +17381,13 @@ html .km-material .k-split-container.km-actionsheet > li, html .km-material .k-o
 
 .km-nova .km-view-subtitle
 {
-    font-size: .47em;
+    font-size: .67em;
     display: block;
-    line-height: 1.2;
+    line-height: 0;
     position: absolute;
     bottom: 0;
     left: 50%;
+    /*margin-left:50px;*/
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     margin-bottom: .875em;
@@ -17704,8 +17705,8 @@ html .km-material .k-split-container.km-actionsheet > li, html .km-material .k-o
 
 .km-nova .km-switch
 {
-    width: 4.3rem;
-    height: 2.4rem;
+    width: 4.0rem;
+    height: 2.0rem;
     overflow: visible;
 }
 

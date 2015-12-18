@@ -12,41 +12,10 @@ window.APP = {
             title: 'Settings'
         },
         childrens: {
-            title: 'Childrens'
-            //ds: new kendo.data.DataSource({
-            //    schema: {
-            //        model: {
-            //            id: "id",
-            //            fields: {
-            //                id: { type: "number" },
-            //                name: { type: "string" },
-            //                schoolid: { type: "string" },
-            //                schoolname: { type: "string" },
-            //                routeno: { type: "string" },
-            //                pickuplocation: { type: "string" },
-            //                pickuploclat: { type: "float" },
-            //                pickuploclng: { type: "float" },
-            //                pickuptime: { type: "string" },
-            //                pickupdays: { type: "string" }
-            //            }
-            //        }
-            //    },
-            //    transport: {
-            //        read: {
-            //            url: "data/bus-live-status.json"
-            //        },
-            //        dataType: "json"
-            //    }
-            //}),
+            title: 'Childrens'            
         },
         contacts: {
-            title: 'Contacts',
-            ds: new kendo.data.DataSource({
-                data: [{ id: 1, name: 'Bob' }, { id: 2, name: 'Mary' }, { id: 3, name: 'John' }]
-            }),
-            alert: function (e) {
-                alert(e.data.name);
-            }
+            title: 'Contacts'            
         }
     }
 };

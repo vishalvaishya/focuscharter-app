@@ -10,6 +10,8 @@
 		"pickuploclng": -80.533733,
 		"pickuptime" : "9:00 AM",
         "pickupeta" : "9:00 AM",
+        "pickupnotification" : "5, 10",
+        "dropoffnotification" : "10",
 		"pickupdays" : "Mon,Tue,Wed,Thu,Fri"        
     },
     {
@@ -19,10 +21,12 @@
         "schoolname": "Highlands Elementary School",
         "routeno": "127",
         "pickuplocation": "11851 Cape Cod Ln, Huntley, IL",
-		"pickuploclat": 43.475408,
+		"pickuploclat": 43.435408,
 		"pickuploclng": -80.533733,
         "pickuptime" : "9:15 AM",
 		"pickupeta" : "9:20 AM",
+        "pickupnotification" : "5, 10",
+        "dropoffnotification" : "10",
 		"pickupdays" : "Mon,Tue,Wed,Thu,Fri" 
     },
      {
@@ -32,10 +36,12 @@
         "schoolname": "Highlands Elementary School",
         "routeno": "197",
         "pickuplocation": "11851 Cape Cod Ln, Huntley, IL",
-		"pickuploclat": 43.475408,
+		"pickuploclat": 43.495408,
 		"pickuploclng": -80.533733,
 		"pickuptime" : "9:30 AM",
         "pickupeta" : "9:40 AM",
+         "pickupnotification" : "5, 10",
+        "dropoffnotification" : "10",
 		"pickupdays" : "Mon,Tue,Wed,Thu,Fri" 
     }
 ]
